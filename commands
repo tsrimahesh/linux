@@ -1,0 +1,2 @@
+#To know the release of Linux OS:
+cat /etc/*release
