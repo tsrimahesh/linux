@@ -1,2 +1,244 @@
 #To know the release of Linux OS:
 cat /etc/*release
+
+Linux learnt till now
+
+Learnt all the basic commands for a VI text editor
+Touch
+Cat
+>> append
+>
+| pipes
+Grep
+Ls
+Dd – to delete the line where cursor is placed
+A appends and activates insert
+O
+Yy
+P
+p 
+u
+U
+/, ?
+Sed
+Uniq
+Sort
+More, less
+Man
+Info
+Fmt
+Nl
+Find -name, -iname, -type, -size, -mtime, -user, -perm, -exec chmod {}\;
+Which
+Locate
+Cp -rf to copy files recursively and forced.
+Archiving, compressing, unpack and uncompress files: -
+Tar-cvf (new name of the tar file) (name or path of the file which must 
+be archived)
+      -tvf file name – this is to view what we have tarred in the file.
+      -cvzf helps to zip the tar file directly.
+Tar -zxvf location of the zip file, this helps to unzip and extract 
+rebose files.
+Tar -cvzf file name -- exclude =file name which you want to exclude.
+     -p to preserve the ownership and other details of the files.
+Root account cannot be accessed from remote as the access is disabled by 
+default.
+Set UID: -
+Chmod g+s file or directory name
+Chmod 2755
+Set user ID gives the privilege of executing the file with the 
+privileges of the owner of the file or that of the group, depending on 
+the position of s in the long listing of file.
+Stickybit is a function where in makes the arrangement of giving the 
+privilege of deleting a file by the owner of the file but no one else, 
+it is represented with a t in the long listing of the file.
+Chmod u+t, g+t.
+Chattr is the command where we can change the attributes of the file, -I 
+immutable, +a appendable only. 
+To see the list of special attributes of a file system we can give the 
+command - ls attr.
+Transfer files securely via the network: -
+Scp -v (path of the file to be sent) (name of the user at IP address of 
+the server followed by the path where the file must be placed.)
+To receive the file from the other server, should reverse the command 
+provided earlier.
+SFTP: -
+Secure file transfer protocol, advantage of this way of transfer is that 
+we can browse the file system till where the user who has provided the 
+access to the filesystem and get that file from there. 
+SFTP user@IP address, after this we should enter the password of the 
+user.
+To get the file, get file name in the secondary server followed by a new 
+name to the file if you would like to name a new name to the file. If 
+you would like to change the directory in the local server then can use 
+the command lcd in the sftp environment. 
+
+Top and htop commands for the process running in the system
+Free -m shows the memory used and available in MB 
+Df-h shows us the existing mount points and how much memory is used in 
+human readable format.
+I nodes is an attribute which stores the disc allocation of the data.
+Df- hTi shows us the available i-nodes.
+/var contains all the log files of the user.
+Du -h shows us how much space is taken by the directories.
+Du -sch can be used to know the space used by a directory.
+Ps ef shows the processes running not only of the user but also of all 
+the users with the PID, PID is process ID which gives the information 
+about when the process began after the system boots.
+Dmesg gives the information about the drivers that are loaded and what 
+order they are loaded.
+User management: -
+There are two ways of adding a user, they are useradd and adduser, I 
+would chose adduser as it does all the things on the background for the 
+user account to be all set.
+/etc/group has the details of the groups and users in it, can edit the 
+file to add a user to a group.
+/etc/passwd has the details of the user, can enable or disable a user 
+account from here, can edit the details of the user as well over here.
+/etc/shadow has the details of the password of the users.
+Visudo helps to add user to the sudo group.
+Process priorities are given between 20 and -20, 20 being the lowest 
+priority and -20 being the highest priority, we can see this in top and 
+htop.
+Ps aux gives all the processes run by all users.
+Ps axjf gives the tree of how the process works
+Pgrep helps to check the PID of any command given
+Kill -hup will restart the process provided, whereas nohup will make the 
+output to be written in a file and not show it in the standard output.
+Nice and renice are used to modify the priority of a process, where nice 
+is used for new processes and renice is used for processes which are 
+already running.
+GIT commands 
+
+	
+
+
+Git init initialize the git repository 
+
+	git clone ssh://git@github.com/[username]/[repository-name].git
+	Create a local copy of a remote repository
+	
+
+	git status	
+	Check status
+	
+
+	git add [file-name.txt]	
+	Add a file to the staging area
+	
+
+	git add -A	
+	Add all new and changed files to the staging area
+	
+
+	git commit -m "[commit message]"	
+	Commit changes
+	
+
+	git rm -r [file-name.txt]	
+	Remove a file (or folder)
+	
+
+	git branch	
+	List branches (the asterisk denotes the current branch)
+	
+
+	git branch -a	
+	List all branches (local and remote)
+	
+
+	git branch [branch name]	
+	Create a new branch
+	
+
+	git branch -d [branch name]	
+	Delete a branch
+	
+
+	git push origin --delete [branchName]	
+	Delete a remote branch
+	
+
+	git checkout -b [branch name]	
+	Create a new branch and switch to it
+	
+
+	git checkout -b [branch name] origin/[branch name]	
+	Clone a remote branch and switch to it
+	
+
+	git checkout [branch name]	
+	Switch to a branch
+	
+
+	git checkout -	
+	Switch to the branch last checked out
+	
+
+	git checkout -- [file-name.txt]	
+	Discard changes to a file
+	
+
+	git merge [branch name]	
+	Merge a branch into the active branch
+	
+
+	git merge [source branch] [target branch]	
+	Merge a branch into a target branch
+	
+
+	git stash	
+	Stash changes in a dirty working directory
+	
+
+	git stash clear	
+	Remove all stashed entries
+	
+
+	git push origin [branch name]	
+	Push a branch to your remote repository
+	
+
+	git push -u origin [branch name]	
+	Push changes to remote repository (and remember the branch)
+	
+
+	git push	
+	Push changes to remote repository (remembered branch)
+	
+
+	git push origin --delete [branch name]	
+	Delete a remote branch
+	
+
+	git pull	
+	Update local repository to the newest commit
+	
+
+	git pull origin [branch name]	
+	Pull changes from remote repository
+	
+
+	git remote add origin 
+ssh://git@github.com/[username]/[repository-name].git	
+	Add a remote repository
+	
+
+	git remote set-url origin 
+ssh://git@github.com/[username]/[repository-name].git	
+	Set a repository's origin branch to SSH
+	
+
+	git log	
+	View changes
+	
+
+	git log --summary	
+	View changes (detailed)
+	
+
+	git diff [source branch] [target branch}	
+	Preview changes before merging
+
+
+
